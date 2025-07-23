@@ -1,30 +1,27 @@
-name: Publish Helm Charts
+name: Release Charts
 
 on:
   push:
     branches:
       - main
-    paths:
-      - 'charts/**'
 
 jobs:
-  publish:
+  release:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Set up Helm
-        uses: azure/setup-helm@v3
-
-      - name: Package Helm Charts
-        run: |
-          mkdir -p .deploy
-          helm package charts/* -d .deploy
-          helm repo index .deploy --url https://rafay-vivek.github.io/vivek-addon-bug/
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .deploy
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.6.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
