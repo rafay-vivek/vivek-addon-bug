@@ -16,7 +16,7 @@ spec:
         repository: my-k8s-repository
         revision: main
         valuesPaths:
-        - name: ballot-deployment.yaml
+        - name: test
     options:
       maxHistory: 10
       timeout: 5m0s
