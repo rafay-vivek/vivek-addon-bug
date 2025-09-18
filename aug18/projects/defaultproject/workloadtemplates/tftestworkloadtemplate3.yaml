@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: WorkloadTemplate
+metadata:
+  name: tftestworkloadtemplate3
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: relative/path/to/some/chart.tgz
+      repository: my-k8s-repository
+      revision: main
+    options:
+      timeout: 0s
+    type: Helm
