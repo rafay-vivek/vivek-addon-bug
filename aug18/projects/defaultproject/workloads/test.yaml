@@ -22,3 +22,5 @@ spec:
       timeout: 5m0s
     type: Helm
   namespace: mnop22
+  placement:
+    selector: rafay.dev/clusterName=remote-minikube-cluster-august28
