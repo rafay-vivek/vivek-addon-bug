@@ -11,7 +11,12 @@ spec:
       repository: my-k8s-repository
       revision: master
       valuesPaths:
-      - name: ballot-deployment1.yaml
+      - {}
+      valuesRef:
+        repository: my-k8s-repository
+        revision: main
+        valuesPaths:
+        - name: ballot-deployment.yaml
     options:
       maxHistory: 10
       timeout: 5m0s
