@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test-workload
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/test-workload/test-workload.yaml
+    type: Yaml
+  namespace: namespace2
+  placement:
+    selector: rafay.dev/clusterName=local-minikube-cluster-august28
+  version: test-workload-v4-202508281006050000
