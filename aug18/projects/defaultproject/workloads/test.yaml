@@ -24,3 +24,4 @@ spec:
   namespace: mnop22
   placement:
     selector: rafay.dev/clusterName=remote-minikube-cluster-august28
+  version: test-v1-202509180857490000
