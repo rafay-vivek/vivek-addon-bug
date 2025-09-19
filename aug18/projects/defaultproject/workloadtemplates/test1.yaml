@@ -9,6 +9,11 @@ spec:
       chartName: mychart
       chartVersion: 0.1.3
       repository: default-bitnami
+      valuesRef:
+        repository: my-k8s-repository
+        revision: main
+        valuesPaths:
+        - name: ballot-deployment.yaml
     options:
       maxHistory: 10
       timeout: 5m0s
