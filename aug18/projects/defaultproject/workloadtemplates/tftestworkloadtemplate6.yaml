@@ -1,0 +1,19 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: WorkloadTemplate
+metadata:
+  name: tftestworkloadtemplate6
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      chartName: testChart
+      chartVersion: 1.2.3
+      repository: default-bitnami
+      valuesRef:
+        repository: my-k8s-repository
+        revision: main
+        valuesPaths:
+        - name: value/path/values.yaml
+    options:
+      timeout: 0s
+    type: Helm
