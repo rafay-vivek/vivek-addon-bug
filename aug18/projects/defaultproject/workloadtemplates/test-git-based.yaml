@@ -5,7 +5,13 @@ metadata:
   project: defaultproject
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      chartPath:
+        name: ballot-deployment.yaml
+      repository: my-k8s-repository
+      revision: master
+      valuesPaths:
+      - {}
     options:
       maxHistory: 10
       timeout: 5m0s
