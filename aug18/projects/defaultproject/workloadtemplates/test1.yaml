@@ -5,7 +5,10 @@ metadata:
   project: defaultproject
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      chartName: mychart
+      chartVersion: 0.1.3
+      repository: default-bitnami
     options:
       maxHistory: 10
       timeout: 5m0s
