@@ -1,23 +1,20 @@
 apiVersion: apps.k8smgmt.io/v3
 kind: WorkloadTemplate
 metadata:
-  name: test-workload-template-7
+  name: tftestworkloadtemplate4
   project: defaultproject
 spec:
   artifact:
     artifact:
       chartPath:
-        name: ballot-deployment.yaml
+        name: relative/path/to/some/chart.tgz
       repository: my-k8s-repository
-      revision: master
-      valuesPaths:
-      - name: charts/sample-chart
+      revision: main
       valuesRef:
         repository: my-k8s-repository
         revision: main
         valuesPaths:
-        - name: test
+        - name: value/path/values.yaml
     options:
-      maxHistory: 10
-      timeout: 5m0s
+      timeout: 0s
     type: Helm
