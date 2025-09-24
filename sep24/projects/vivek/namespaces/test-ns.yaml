@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: test-ns
+  project: vivek
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: minikube-cluster-oct08
+  resourceQuotas:
+    cpuLimits: 10m
+    cpuRequests: 10m
+    memoryRequests: 10Mi

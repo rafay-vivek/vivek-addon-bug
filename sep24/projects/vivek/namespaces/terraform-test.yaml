@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    rafay.dev/description: Testing
+  description: Testing
+  name: terraform-test
+  project: vivek
+spec:
+  namespaceMeshPolicyParams: {}
+  resourceQuotas:
+    cpuLimits: 10m
+    cpuRequests: 10m
+    memoryRequests: 10Mi

@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: abcdefghijklmnopqrstuvwxyz123456789012345678901234567890
+  project: vivek
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: local-minikube-cluster-feb11
+  resourceQuotas:
+    cpuLimits: 10m
+    cpuRequests: 10m
+    memoryLimits: 10Mi
+    memoryRequests: 10Mi

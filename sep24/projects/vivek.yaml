@@ -1,0 +1,15 @@
+apiVersion: system.k8smgmt.io/v3
+kind: Project
+metadata:
+  name: vivek
+spec:
+  clusterResourceQuota:
+    ephemeralStorageLimits: 300Mi
+    ephemeralStorageRequests: 700Mi
+    pods: "1000"
+  defaultClusterNamespaceQuota:
+    ephemeralStorageLimits: 10Mi
+    ephemeralStorageRequests: 10Mi
+    pods: "12"
+  driftWebhook:
+    enabled: true

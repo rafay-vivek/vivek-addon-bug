@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: vivek-test-2
+  project: vivek
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: vivek-qc-oci-minikube
+    - key: rafay.dev/clusterName
+      value: nginx-ingress-issue-fix
+  resourceQuotas:
+    cpuRequests: 10m
+    memoryRequests: 10Mi

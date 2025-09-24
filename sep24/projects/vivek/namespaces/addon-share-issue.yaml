@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: addon-share-issue
+  project: vivek
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: vivek-minikube
+  resourceQuotas:
+    cpuLimits: 10m
+    cpuRequests: 10m
+    memoryRequests: 10Mi
