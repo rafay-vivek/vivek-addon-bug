@@ -4,6 +4,14 @@ metadata:
   name: sample-namespace
   project: vivek
 spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: vivek-remote-minikube-cluster-sep24
   resourceQuotas:
     ephemeralStorageLimits: 10Mi
     ephemeralStorageRequests: 10Mi
