@@ -1,0 +1,10 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: sample-namespace
+  project: vivek
+spec:
+  resourceQuotas:
+    ephemeralStorageLimits: 10Mi
+    ephemeralStorageRequests: 10Mi
+    pods: "12"
