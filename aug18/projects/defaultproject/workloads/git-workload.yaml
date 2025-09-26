@@ -1,0 +1,17 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: git-workload
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: ballot-deployment.yaml
+      repository: my-k8s-repository
+      revision: main
+    type: Yaml
+  namespace: mnop22
+  placement:
+    selector: rafay.dev/clusterName=local-minikube-september23
+  version: git-workload-v13-202509231309450000

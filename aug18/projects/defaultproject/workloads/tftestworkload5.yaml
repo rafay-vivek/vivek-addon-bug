@@ -1,0 +1,18 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: tftestworkload5
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: ballot-deployment.yaml
+      repository: my-k8s-repository
+      revision: main
+    options: {}
+    type: Yaml
+  namespace: mnop22
+  placement:
+    selector: rafay.dev/clusterName=local-minikube-september23
+  version: v1
