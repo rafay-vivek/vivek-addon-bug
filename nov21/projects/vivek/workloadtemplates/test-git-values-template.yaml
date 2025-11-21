@@ -8,7 +8,7 @@ spec:
     artifact:
       chartName: mychart
       chartVersion: 0.1.4
-      repository: default-bitnami
+      repository: default-bitnami1
       valuesRef:
         repository: default-cert-manager
         revision: main
