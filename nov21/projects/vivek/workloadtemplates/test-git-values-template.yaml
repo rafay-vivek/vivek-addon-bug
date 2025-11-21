@@ -13,7 +13,7 @@ spec:
         repository: default-cert-manager
         revision: main
         valuesPaths:
-        - name: ballot-deployment.yaml
+        - name: ballot-deployment1.yaml
     options:
       maxHistory: 10
       timeout: 5m0s
