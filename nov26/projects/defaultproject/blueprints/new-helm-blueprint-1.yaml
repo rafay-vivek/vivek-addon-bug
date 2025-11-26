@@ -1,0 +1,20 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: new-helm-blueprint-1
+  project: defaultproject
+spec:
+  base:
+    name: default-upstream
+    version: 3.8.0
+  defaultAddons:
+    disableAwsNodeTerminationHandler: true
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      gpuOperator: {}
+  driftWebhook:
+    enabled: true
+  type: custom
+  version: default-upstream-4
+  versionState: active

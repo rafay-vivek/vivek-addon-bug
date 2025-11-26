@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: blueprint-with-multiple-base-bp
+  project: defaultproject
+spec:
+  base:
+    name: minimal
+    version: 3.8.0
+  defaultAddons:
+    disableAwsNodeTerminationHandler: true
+    enableIngress: true
+    monitoring:
+      gpuOperator: {}
+  driftWebhook: {}
+  type: custom
+  version: minimal
+  versionState: active

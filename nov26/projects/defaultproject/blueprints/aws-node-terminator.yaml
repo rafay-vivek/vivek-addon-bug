@@ -1,0 +1,11 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: aws-node-terminator
+  project: defaultproject
+spec:
+  defaultAddons:
+    disableAwsNodeTerminationHandler: true
+  driftWebhook:
+    enabled: true
+  type: custom

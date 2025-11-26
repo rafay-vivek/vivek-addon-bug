@@ -1,0 +1,11 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: v2-aws-node-termination-handler
+  project: defaultproject
+spec:
+  defaultAddons:
+    disableAwsNodeTerminationHandler: true
+  driftWebhook:
+    enabled: true
+  type: custom

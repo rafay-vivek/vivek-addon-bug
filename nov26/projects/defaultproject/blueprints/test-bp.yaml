@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: test-bp
+  project: defaultproject
+spec:
+  base:
+    name: default
+    version: 3.7.0
+  defaultAddons:
+    monitoring:
+      gpuOperator: {}
+  driftWebhook:
+    enabled: true
+  type: custom
+  version: v2
+  versionState: active
