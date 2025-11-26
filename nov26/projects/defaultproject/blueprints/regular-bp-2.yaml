@@ -1,7 +1,7 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Blueprint
 metadata:
-  name: v2-aws-node-termination-handler
+  name: regular-bp-2
   project: defaultproject
 spec:
   driftWebhook:

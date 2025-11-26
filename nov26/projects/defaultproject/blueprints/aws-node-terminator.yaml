@@ -4,8 +4,6 @@ metadata:
   name: aws-node-terminator
   project: defaultproject
 spec:
-  defaultAddons:
-    disableAwsNodeTerminationHandler: true
   driftWebhook:
     enabled: true
   type: custom
