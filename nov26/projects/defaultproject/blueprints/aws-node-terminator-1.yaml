@@ -9,13 +9,11 @@ spec:
     name: default
     version: 3.8.0
   defaultAddons:
-    disableAwsNodeTerminationHandler: false
     enableIngress: true
     enableMonitoring: true
     enableVM: true
     monitoring:
-      gpuOperator:
-        discovery: {}
+      gpuOperator: {}
       helmExporter:
         enabled: true
       kubeStateMetrics:
