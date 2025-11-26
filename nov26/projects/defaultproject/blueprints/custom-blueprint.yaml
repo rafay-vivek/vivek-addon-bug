@@ -8,7 +8,6 @@ spec:
     name: default-upstream-kubeovn-chaining
     version: 3.8.0
   defaultAddons:
-    disableAwsNodeTerminationHandler: true
     enableCsiSecretStore: true
     enableIngress: true
     enableMonitoring: true
@@ -23,5 +22,5 @@ spec:
     enableSync: true
     syncType: Managed
   type: custom
-  version: v6
+  version: v8
   versionState: active
