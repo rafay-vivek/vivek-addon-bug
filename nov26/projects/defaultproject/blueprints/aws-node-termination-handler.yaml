@@ -5,15 +5,15 @@ metadata:
   project: defaultproject
 spec:
   base:
-    name: minimal
+    name: default
     version: 3.8.0
   defaultAddons:
-    disableAwsNodeTerminationHandler: false
+    disableAwsNodeTerminationHandler: true
     enableIngress: true
     monitoring:
       gpuOperator: {}
   driftWebhook:
     enabled: true
   type: custom
-  version: v5
+  version: v4
   versionState: active
