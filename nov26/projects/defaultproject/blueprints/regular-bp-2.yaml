@@ -4,6 +4,14 @@ metadata:
   name: regular-bp-2
   project: defaultproject
 spec:
+  base:
+    name: default
+    version: 3.8.0
+  defaultAddons:
+    monitoring:
+      gpuOperator: {}
   driftWebhook:
     enabled: true
   type: custom
+  version: v1
+  versionState: active
