@@ -8,11 +8,10 @@ spec:
     name: default
     version: 3.8.0
   defaultAddons:
-    disableAwsNodeTerminationHandler: true
     monitoring:
       gpuOperator: {}
   driftWebhook:
     enabled: true
   type: custom
-  version: v7
+  version: v8
   versionState: active
