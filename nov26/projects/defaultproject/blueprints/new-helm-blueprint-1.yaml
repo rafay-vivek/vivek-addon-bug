@@ -16,5 +16,5 @@ spec:
   driftWebhook:
     enabled: true
   type: custom
-  version: default-upstream-6
+  version: default-upstream-10
   versionState: active
