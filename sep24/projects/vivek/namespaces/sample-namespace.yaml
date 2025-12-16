@@ -11,7 +11,7 @@ spec:
   placement:
     labels:
     - key: rafay.dev/clusterName
-      value: vivek-remote-minikube-cluster-sep24
+      value: local-mk-dec16
   resourceQuotas:
     ephemeralStorageLimits: 10Mi
     ephemeralStorageRequests: 10Mi
